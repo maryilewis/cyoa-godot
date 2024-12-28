@@ -17,5 +17,4 @@ func _ready():
 			$MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Options.add_child(button)
 
 func select_option(id: String):
-	print("selected ", id)
 	option_selected.emit(id)
