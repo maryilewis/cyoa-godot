@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://4bg05d7duu5s"]
+
+[ext_resource type="Script" path="res://scenes/page/page.gd" id="1_1iglb"]
+[ext_resource type="Texture2D" uid="uid://bd7euvabuoh1i" path="res://images/test image.png" id="2_end8x"]
+
+[node name="Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1iglb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Title"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_end8x")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+bbcode_enabled = true
+text = "[p]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam lectus non turpis fringilla tempus. Pellentesque congue diam libero, vitae fringilla neque varius suscipit. Pellentesque eget turpis id lacus consectetur vestibulum eu eu odio. Quisque ac arcu odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices, nulla sed hendrerit porttitor, justo purus dapibus libero, eu vehicula tortor neque nec est. Vivamus non accumsan metus. Sed consequat elit at justo auctor ultrices. Donec consequat lacinia varius.[/p]  [br]  [p]Nulla facilisi. Proin eget massa sollicitudin, tincidunt mauris eu, lacinia nunc. Etiam in arcu magna. Praesent quis pharetra lacus, non venenatis neque. Nulla in pharetra nulla, vel dapibus libero. Morbi aliquam mollis turpis in posuere. Vivamus vitae ullamcorper odio. Etiam tincidunt aliquam erat, id varius risus placerat vel. Phasellus bibendum leo lectus, ac venenatis arcu convallis sit amet. Morbi aliquam eget ligula eget consectetur.[/p]"
+fit_content = true
+context_menu_enabled = true
+selection_enabled = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Options" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/ScrollContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2

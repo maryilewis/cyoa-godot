@@ -1,0 +1,4 @@
+id,title,text,image_path,option_text1,option_target1,option_text2,option_target2,option_text3,option_target3
+start,Bedroom,"[p]You are standing in your bedroom. Here, are, some, commas. It is [i]tidy[/i].[/p][p]You are ready for anything.[/p]",res://images/bedroom.png,Go to the kitchen,kitchen,Look out the window,window,,
+kitchen,Kitchen,"Your kitchen smells like lavender and [color=maroon]blood[/color].",res://images/kitchen.png,Go back to your bedroom,start,,,,
+window,Beautiful Day,"You look out the window. It seems like it's nice outside.",res://images/window.png,Next,start,,,,
